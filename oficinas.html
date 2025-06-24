@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Regal Realty - Oficinas</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div id="div-nav">
+      <a href="index.html">
+        <img loading="lazy" class="logo" src="img/logo.jpeg" alt="logo" />
+        <p id="titulo-orange">
+          <span class="regal">Regal</span><br />
+          Realty
+        </p>
+      </a>
+      <nav class="navegacion">
+        <a href="index.html">Home</a>
+        <a href="comprar.html">Comprar</a>
+        <a href="vender.html">Vender</a>
+        <a href="oficinas.html">Oficinas</a>
+        <a href="sobreNosotros.html">Sobre Nosotros</a>
+        <a href="faq.html">Preguntas Frecuentes</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
+    </div>
+
+    <!-- Banner de oficina -->
+    <div class="banner-oficina">
+      <h1>Acercate y Conocenos</h1>
+    </div>
+
+    <!-- Sección de contacto oficina -->
+    <div class="contacto-oficina">
+      <h4>
+        Visitá nuestras oficinas y conocé a nuestro equipo de asesores. Te
+        ayudamos a encontrar la propiedad ideal con un servicio personalizado.
+        ¡Te esperamos!
+      </h4>
+
+      <!-- Selector de ciudad -->
+      <div class="busqueda-oficina">
+        <label for="select-ciudad"
+          ><strong>Seleccioná una ciudad:</strong></label
+        >
+        <select id="select-ciudad" class="btn-general">
+          <option value="neuquen" selected>Neuquén</option>
+          <option value="buenos-aires">Buenos Aires</option>
+          <option value="cordoba">Córdoba</option>
+          <option value="rosario">Rosario</option>
+        </select>
+      </div>
+
+      <!-- Datos de contacto -->
+      <div class="info-contacto">
+        <p>
+          <strong>Dirección:</strong>
+          <span id="direccion">Av. Argentina 1100, Neuquén, Argentina</span>
+        </p>
+        <p>
+          <strong>Correo Electrónico:</strong>
+          <span id="email">info@regalrealty.com</span>
+        </p>
+        <p><strong>WhatsApp:</strong> <span id="whatsapp">+1234567890</span></p>
+      </div>
+
+      <!-- Mapa dinámico -->
+      <iframe
+        id="mapa-oficina"
+        width="100%"
+        height="450"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d12411.52472528442!2d-68.058784977771!3d-38.949542742503425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sar!4v1718380993105!5m2!1ses-419!2sar"
+      ></iframe>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="contenedor-footer">
+        <div class="footer-arriba">
+          <nav class="footer-nav">
+            <a href="index.html">Home</a>
+            <a href="comprar.html">Comprar</a>
+            <a href="vender.html">Vender</a>
+            <a href="oficinas.html">Oficinas</a>
+            <a href="sobreNosotros.html">Sobre Nosotros</a>
+            <a href="faq.html">FAQ</a>
+            <a href="contacto.html">Contacto</a>
+          </nav>
+        </div>
+        <div class="redesSociales">
+          <p>&copy; 2025 Todos los derechos reservados - Tu Empresa</p>
+          <div class="redesSociales-botones">
+            <h4>Seguinos en nuestras redes</h4>
+            <a
+              href="https://www.instagram.com"
+              target="_blank"
+              class="redesSociales-boton"
+            >
+              <img src="img/iconos/instagram.png" alt="Instagram" />
+            </a>
+            <a
+              href="https://www.facebook.com"
+              target="_blank"
+              class="redesSociales-boton"
+            >
+              <img src="img/iconos/facebook.png" alt="Facebook" />
+            </a>
+            <a
+              href="https://www.tiktok.com"
+              target="_blank"
+              class="redesSociales-boton"
+            >
+              <img src="img/iconos/tiktok.png" alt="TikTok" />
+            </a>
+            <a
+              href="https://x.com/tuUsuario"
+              target="_blank"
+              class="redesSociales-boton"
+            >
+              <img src="img/iconos/xTwitter.avif" alt="X Twitter" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Modal -->
+    <div id="modal-alerta" class="modal-alerta oculto">
+      <div class="modal-contenido">
+        <p id="mensaje-modal"></p>
+        <button class="btn-general" onclick="cerrarModal()">OK</button>
+      </div>
+    </div>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>

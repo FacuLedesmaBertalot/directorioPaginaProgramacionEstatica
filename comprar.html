@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Regal Realty - Comprar Propiedades</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div id="div-nav">
+      <a href="index.html">
+        <img loading="lazy" class="logo" src="img/logo.jpeg" alt="logo" />
+        <p id="titulo-orange">
+          <span class="regal">Regal</span><br />
+          Realty
+        </p>
+      </a>
+      <nav class="navegacion">
+        <a href="index.html">Home</a>
+        <a href="comprar.html">Comprar</a>
+        <a href="vender.html">Vender</a>
+        <a href="oficinas.html">Oficinas</a>
+        <a href="sobreNosotros.html">Sobre Nosotros</a>
+        <a href="faq.html">Preguntas Frecuentes</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
+    </div>
+
+    <div class="seccion-filtro">
+      <h1>Nuestras Propiedades a la Venta</h1>
+      <select id="tipo-propiedad">
+        <option value="" disabled selected>Tipo de propiedad</option>
+        <option value="departamento">Departamento</option>
+        <option value="casa">Casa</option>
+        <option value="duplex">Dúplex</option>
+      </select>
+
+      <select id="filtro-precio">
+        <option value="" selected disabled>Filtrar por precio</option>
+        <option value="0-10000000">Hasta $10,000,000</option>
+        <option value="10000001-20000000">$10,000,001 a $20,000,000</option>
+        <option value="20000001-30000000">$20,000,001 a $30,000,000</option>
+        <option value="30000001-999999999">Más de $30,000,000</option>
+      </select>
+
+      <select id="filtro-ubicacion">
+        <option value="" selected disabled>Filtrar por ubicación</option>
+        <option value="buenos aires">Buenos Aires</option>
+        <option value="cordoba">Córdoba</option>
+        <option value="rosario">Rosario</option>
+        <option value="neuquen">Neuquén</option>
+      </select>
+
+      <button id="btn-buscar" class="btn-general">Buscar</button>
+    </div>
+
+    <div class="contenedor-propiedades">
+
+      <!-- Propiedad 1 -->
+      <div class="tarjeta-propiedad" data-tipo="casa" data-precio="47000000" data-ubicacion="buenos aires">
+        <img src="Propiedades/propiedad1/propiedad1Frente.avif" alt="Casa en Buenos Aires" class="imagen-propiedad" loading="lazy" />
+        <div class="tarjeta-info">
+          <div class="precio">$47,000,000</div>
+          <div class="direccion">Av. Córdoba 1234</div>
+          <div class="localidad">Buenos Aires</div>
+          <div class="expensas">Expensas: $33,000</div>
+          <div class="datos-propiedad">
+            <ul>
+              <li>Terreno: 300 m²</li>
+              <li>Cubiertos: 200 m²</li>
+              <li>Ambientes: 4</li>
+              <li>Baños: 3</li>
+            </ul>
+          </div>
+          <div class="vendedor">
+            <img src="img/vendedores/vendedor1.webp" alt="Foto vendedor" class="foto-vendedor" loading="lazy" />
+            <div class="vendedor-info">
+              <div class="vendedor-nombre">Juan Pérez</div>
+              <div class="vendedor-contacto">
+                <a href="https://wa.me/5491123456789" target="_blank"><img src="img/iconos/whatsapp.webp" alt="WhatsApp" /></a>
+                <a href="mailto:juan.perez@regalrealty.com"><img src="img/iconos/gmail.png" alt="Correo" /></a>
+              </div>
+            </div>
+          </div>
+          <a href="propiedad1.html" class="btn-general">Ver más</a>
+        </div>
+      </div>
+
+      <!-- Propiedad 2 -->
+      <div class="tarjeta-propiedad" data-tipo="casa" data-precio="38200000" data-ubicacion="cordoba">
+        <img src="Propiedades/propiedad2/propiedad2Frente.avif" alt="Departamento en Córdoba" class="imagen-propiedad" loading="lazy" />
+        <div class="tarjeta-info">
+          <div class="precio">$38,200,000</div>
+          <div class="direccion">Calle Loyola 567</div>
+          <div class="localidad">Córdoba</div>
+          <div class="expensas">Expensas: $40,500</div>
+          <div class="datos-propiedad">
+            <ul>
+              <li>Terreno: 150 m²</li>
+              <li>Cubiertos: 110 m²</li>
+              <li>Ambientes: 3</li>
+              <li>Baños: 2</li>
+            </ul>
+          </div>
+          <div class="vendedor">
+            <img src="img/vendedores/vendedor2.webp" alt="Foto vendedor" class="foto-vendedor" loading="lazy" />
+            <div class="vendedor-info">
+              <div class="vendedor-nombre">Ana Gómez</div>
+              <div class="vendedor-contacto">
+                <a href="https://wa.me/5491198765432" target="_blank"><img src="img/iconos/whatsapp.webp" alt="WhatsApp" /></a>
+                <a href="mailto:ana.gomez@regalrealty.com"><img src="img/iconos/gmail.png" alt="Correo" /></a>
+              </div>
+            </div>
+          </div>
+          <a href="propiedad1.html" class="btn-general">Ver más</a>
+        </div>
+      </div>
+
+      <!-- Propiedad 3 -->
+      <div class="tarjeta-propiedad" data-tipo="casa" data-precio="29500000" data-ubicacion="rosario">
+        <img src="Propiedades/propiedad3/propiedad3Frente.avif" alt="Dúplex en Rosario" class="imagen-propiedad" loading="lazy" />
+        <div class="tarjeta-info">
+          <div class="precio">$29,500,000</div>
+          <div class="direccion">Av. Santa Fe 890</div>
+          <div class="localidad">Rosario</div>
+          <div class="expensas">Expensas: $10,700</div>
+          <div class="datos-propiedad">
+            <ul>
+              <li>Terreno: 280 m²</li>
+              <li>Cubiertos: 210 m²</li>
+              <li>Ambientes: 5</li>
+              <li>Baños: 4</li>
+            </ul>
+          </div>
+          <div class="vendedor">
+            <img src="img/vendedores/vendedor1.webp" alt="Foto vendedor" class="foto-vendedor" loading="lazy" />
+            <div class="vendedor-info">
+              <div class="vendedor-nombre">Juan Pérez</div>
+              <div class="vendedor-contacto">
+                <a href="https://wa.me/5491123456789" target="_blank"><img src="img/iconos/whatsapp.webp" alt="WhatsApp" /></a>
+                <a href="mailto:juan.perez@regalrealty.com"><img src="img/iconos/gmail.png" alt="Correo" /></a>
+              </div>
+            </div>
+          </div>
+          <a href="propiedad1.html" class="btn-general">Ver más</a>
+        </div>
+      </div>
+
+      <!-- Propiedad 4 -->
+      <div class="tarjeta-propiedad" data-tipo="departamento" data-precio="20800000" data-ubicacion="neuquen">
+        <img src="Propiedades/departamento.webp" alt="Departamento en Neuquén" class="imagen-propiedad" loading="lazy" />
+        <div class="tarjeta-info">
+          <div class="precio">$20,800,000</div>
+          <div class="direccion">Calle Mendoza 234</div>
+          <div class="localidad">Neuquén</div>
+          <div class="expensas">Expensas: $12,000</div>
+          <div class="datos-propiedad">
+            <ul>
+              <li>Terreno: 320 m²</li>
+              <li>Cubiertos: 230 m²</li>
+              <li>Ambientes: 4</li>
+              <li>Baños: 3</li>
+            </ul>
+          </div>
+          <div class="vendedor">
+            <img src="img/vendedores/vendedor2.webp" alt="Foto vendedor" class="foto-vendedor" loading="lazy" />
+            <div class="vendedor-info">
+              <div class="vendedor-nombre">Ana Gómez</div>
+              <div class="vendedor-contacto">
+                <a href="https://wa.me/5491198765432" target="_blank"><img src="img/iconos/whatsapp.webp" alt="WhatsApp" /></a>
+                <a href="mailto:ana.gomez@regalrealty.com"><img src="img/iconos/gmail.png" alt="Correo" /></a>
+              </div>
+            </div>
+          </div>
+          <a href="propiedad1.html" class="btn-general">Ver más</a>
+        </div>
+      </div>
+
+      <!-- Propiedad 5 -->
+      <div class="tarjeta-propiedad" data-tipo="duplex" data-precio="17300000" data-ubicacion="buenos aires">
+        <img src="Propiedades/duplex.avif" alt="Dúplex en Buenos Aires" class="imagen-propiedad" loading="lazy" />
+        <div class="tarjeta-info">
+          <div class="precio">$17,300,000</div>
+          <div class="direccion">Av. Callao 456</div>
+          <div class="localidad">Buenos Aires</div>
+          <div class="expensas">Expensas: $8,000</div>
+          <div class="datos-propiedad">
+            <ul>
+              <li>Terreno: 180 m²</li>
+              <li>Cubiertos: 140 m²</li>
+              <li>Ambientes: 3</li>
+              <li>Baños: 2</li>
+            </ul>
+          </div>
+          <div class="vendedor">
+            <img src="img/vendedores/vendedor1.webp" alt="Foto vendedor" class="foto-vendedor" loading="lazy" />
+            <div class="vendedor-info">
+              <div class="vendedor-nombre">Juan Pérez</div>
+              <div class="vendedor-contacto">
+                <a href="https://wa.me/5491123456789" target="_blank"><img src="img/iconos/whatsapp.webp" alt="WhatsApp" /></a>
+                <a href="mailto:juan.perez@regalrealty.com"><img src="img/iconos/gmail.png" alt="Correo" /></a>
+              </div>
+            </div>
+          </div>
+          <a href="propiedad1.html" class="btn-general">Ver más</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Modal -->
+    <div id="modal-alerta" class="modal-alerta oculto">
+      <div class="modal-contenido">
+        <p id="mensaje-modal"></p>
+        <button class="btn-general" onclick="cerrarModal()">OK</button>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="contenedor-footer">
+        <div class="footer-arriba">
+          <nav class="footer-nav">
+            <a href="index.html">Home</a>
+            <a href="comprar.html">Comprar</a>
+            <a href="vender.html">Vender</a>
+            <a href="oficinas.html">Oficinas</a>
+            <a href="sobreNosotros.html">Sobre Nosotros</a>
+            <a href="faq.html">FAQ</a>
+            <a href="contacto.html">Contacto</a>
+          </nav>
+        </div>
+        <div class="redesSociales">
+          <p>&copy; 2025 Todos los derechos reservados - Tu Empresa</p>
+          <div class="redesSociales-botones">
+            <h4>Seguinos en nuestras redes</h4>
+            <a href="https://www.instagram.com" target="_blank" class="redesSociales-boton">
+              <img src="img/iconos/instagram.png" alt="Instagram" />
+            </a>
+            <a href="https://www.facebook.com" target="_blank" class="redesSociales-boton">
+              <img src="img/iconos/facebook.png" alt="Facebook" />
+            </a>
+            <a href="https://www.tiktok.com" target="_blank" class="redesSociales-boton">
+              <img src="img/iconos/tiktok.png" alt="TikTok" />
+            </a>
+            <a href="https://x.com/tuUsuario" target="_blank" class="redesSociales-boton">
+              <img src="img/iconos/xTwitter.avif" alt="X Twitter" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>

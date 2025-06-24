@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Regal Realty - Página de Inicio</title>
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div id="div-nav">
+    <a href="index.html">
+      <img loading="lazy" class="logo" src="img/logo.jpeg" alt="logo" />
+      <p id="titulo-orange">
+        <span class="regal">Regal</span><br />
+        Realty
+      </p>
+    </a>
+    <nav class="navegacion">
+      <a href="index.html">Home</a>
+      <a href="comprar.html">Comprar</a>
+      <a href="vender.html">Vender</a>
+      <a href="oficinas.html">Oficinas</a>
+      <a href="sobreNosotros.html">Sobre Nosotros</a>
+      <a href="faq.html">Preguntas Frecuentes</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+  </div>
+
+  <!-- Sección de opciones de búsqueda con fondo y lema -->
+  <div class="seccion-busqueda">
+    <div class="banner-mudanza">
+      <h1>Mucho más que mudarte</h1>
+      <p>Descubrí oportunidades, viví experiencias, elegí tu nuevo hogar.</p>
+    </div>
+
+    <h1>¿Qué estás buscando?</h1>
+    <div class="opciones">
+  
+      <h2>Encuentra la opción que mejor se adapte a tus necesidades</h2>
+      <a href="comprar.html" class="btn-general" data-opcion="comprar">Comprar</a>
+      <a href="vender.html" class="btn-general" data-opcion="vender">Vender</a>
+
+    </div>
+  </div>
+
+  <!-- Sección de propiedades con carrusel -->
+  <div class="seccion-propiedades">
+    <h1>Propiedades destacadas</h1>
+    <p class="introduccion-propiedades">Descubrí las mejores opciones que tenemos para vos: casas y PHs seleccionados cuidadosamente por su ubicación, calidad y comodidad. Cada propiedad ofrece espacios amplios y detalles pensados para tu estilo de vida.</p>
+
+    <div class="carrusel" id="carruselPropiedades">
+      <div class="carrusel-contenido">
+
+        <!-- Clon de la última diapositiva al principio -->
+        <div class="diapositiva clonada">
+          <div class="contenido-propiedad">
+            <h3>Casa en San Isidro</h3>
+            <p>Amplia propiedad de 5 ambientes con jardín, pileta, quincho y detalles de calidad en cada ambiente.</p>
+            <a href="propiedad1.html" class="btn-ver-mas">Ver más</a>
+          </div>
+            <img src="Propiedades/propiedad3/propiedad3Frente.avif" alt="Casa en San Isidro" />
+
+        </div>
+
+        <!-- Diapositivas reales -->
+        <div class="diapositiva">
+          <div class="contenido-propiedad">
+            <h3>Casa en Palermo</h3>
+            <p>Amplia casa de 4 ambientes con patio y cochera. Excelente ubicación cerca de parques y transporte público.</p>
+            <a href="propiedad1.html" class="btn-ver-mas">Ver más</a>
+          </div>
+            <img src="Propiedades/propiedad1/propiedad1Frente.avif" alt="Casa en Palermo" />
+
+        </div>
+
+        <div class="diapositiva">
+          <div class="contenido-propiedad">
+            <h3>Casa en Villa Crespo</h3>
+            <p>Moderno PH de 3 ambientes, completamente reciclado, con terraza propia y espacios luminosos.</p>
+            <a href="propiedad1.html" class="btn-ver-mas">Ver más</a>
+          </div>
+            <img src="Propiedades/propiedad2/propiedad2Frente.avif" alt="PH en Villa Crespo" />
+        </div>
+
+        <div class="diapositiva">
+          <div class="contenido-propiedad">
+            <h3>Casa en San Isidro</h3>
+            <p>Amplia propiedad de 5 ambientes con jardín, pileta, quincho y detalles de calidad en cada ambiente.</p>
+            <a href="propiedad1.html" class="btn-ver-mas">Ver más</a>
+          </div>
+            <img src="Propiedades/propiedad3/propiedad3Frente.avif" alt="Casa en San Isidro" />
+        </div>
+
+        <!-- Clon de la primera diapositiva al final -->
+        <div class="diapositiva clonada">
+          <a href="propiedad1.html">
+            <img src="Propiedades/propiedad1/propiedad1Frente.avif" alt="Casa en Palermo Duplicada" />
+          </a>
+        </div>
+      </div>
+
+      <button class="carrusel-control anterior">
+        <span class="icono-control-previo" aria-hidden="true"></span>
+        <span class="visualmente-oculto">Anterior</span>
+      </button>
+      <button class="carrusel-control siguiente">
+        <span class="icono-control-siguiente" aria-hidden="true"></span>
+        <span class="visualmente-oculto">Siguiente</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Sección de Oficinas, Trabajo y Encuesta -->
+  <section class="seccion-multiples">
+    <div class="container">
+      <img loading="lazy" src="img/imgFranquicia.avif" alt="Franquicias" />
+      <div class="contenido-hover">
+        <h2>Franquicias</h2>
+        <p>Sumate a nuestro modelo de negocios y formá parte de una red con presencia nacional.</p>
+        <button class="btn-general"><a href="oficinas.html">Ver más</a></button>
+      </div>
+    </div>
+
+    <div class="container">
+      <img loading="lazy" src="img/trabajaConNosotros.avif" alt="Trabajá con nosotros" />
+      <div class="contenido-hover">
+        <h2>Unite a trabajar con nosotros</h2>
+        <p>Buscamos personas comprometidas, con ganas de crecer y desarrollarse profesionalmente.</p>
+        <button class="btn-general"><a href="contacto.html">Contáctanos</a></button>
+      </div>
+    </div>
+
+    <div class="container">
+      <img loading="lazy" src="img/encuestaCalidad.avif" alt="Encuesta de calidad" />
+      <div class="contenido-hover">
+        <h2>Encuesta de calidad</h2>
+        <p>Tu opinión nos ayuda a mejorar. Completá nuestra breve encuesta y participá de sorteos.</p>
+        <button class="btn-general"><a href="encuestaCalidad.html">Ver más</a></button>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="contenedor-footer">
+      <div class="footer-arriba">
+        <nav class="footer-nav">
+          <a href="index.html">Home</a>
+          <a href="comprar.html">Comprar</a>
+          <a href="vender.html">Vender</a>
+          <a href="oficinas.html">Oficinas</a>
+          <a href="sobreNosotros.html">Sobre Nosotros</a>
+          <a href="faq.html">FAQ</a>
+          <a href="contacto.html">Contacto</a>
+        </nav>
+      </div>
+      <div class="redesSociales">
+        <p>&copy; 2025 Todos los derechos reservados - Tu Empresa</p>
+        <div class="redesSociales-botones">
+          <h4>Seguinos en nuestras redes</h4>
+          <a href="https://www.instagram.com" target="_blank" class="redesSociales-boton">
+            <img src="img/iconos/instagram.png" alt="Instagram" />
+          </a>
+          <a href="https://www.facebook.com" target="_blank" class="redesSociales-boton">
+            <img src="img/iconos/facebook.png" alt="Facebook" />
+          </a>
+          <a href="https://www.tiktok.com" target="_blank" class="redesSociales-boton">
+            <img src="img/iconos/tiktok.png" alt="TikTok" />
+          </a>
+          <a href="https://x.com/tuUsuario" target="_blank" class="redesSociales-boton">
+            <img src="img/iconos/xTwitter.avif" alt="X Twitter" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>

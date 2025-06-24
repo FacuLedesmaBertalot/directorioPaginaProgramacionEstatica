@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vender Propiedad - Regal Realty</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div id="div-nav">
+    <a href="index.html">
+      <img loading="lazy" class="logo" src="img/logo.jpeg" alt="logo" />
+      <p id="titulo-orange">
+        <span class="regal">Regal</span><br />
+        Realty
+      </p>
+    </a>
+    <nav class="navegacion">
+      <a href="index.html">Home</a>
+      <a href="comprar.html">Comprar</a>
+      <a href="vender.html">Vender</a>
+      <a href="oficinas.html">Oficinas</a>
+      <a href="sobreNosotros.html">Sobre Nosotros</a>
+      <a href="faq.html">Preguntas Frecuentes</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+  </div>
+
+  <div class="vender-contacto">
+    <div class="vendedor-pregunta">
+      <h1>¿Ya te contactaste con nosotros?</h1>
+      <div class="pregunta-contacto">
+        <button type="button" class="btn-general" onclick="mostrarFormulario(true)">Sí</button>
+        <button type="button" class="btn-general" onclick="window.location.href='contacto.html'">No</button>
+      </div>
+    </div>
+
+    <form id="formulario-propiedad" class="oculto">
+      <h2>Datos de la Propiedad</h2>
+
+      <label for="titulo">Título de la propiedad:</label>
+      <input type="text" id="titulo" name="titulo" />
+
+      <label for="precio">Precio (ARS):</label>
+      <input type="number" id="precio" name="precio" />
+
+      <label for="expensas">¿Tiene expensas?</label>
+      <select id="expensas" name="expensas">
+        <option value="">Seleccionar</option>
+        <option value="Sí">Sí</option>
+        <option value="No">No</option>
+      </select>
+
+      <label for="direccion">Dirección:</label>
+      <input type="text" id="direccion" name="direccion" />
+
+      <label for="localidad">Localidad:</label>
+      <input type="text" id="localidad" name="localidad" />
+
+      <label for="tipo">Tipo de propiedad:</label>
+      <select id="tipo" name="tipo">
+        <option value="">Seleccionar</option>
+        <option value="Departamento">Departamento</option>
+        <option value="Casa">Casa</option>
+        <option value="Dúplex">Dúplex</option>
+      </select>
+
+      <label for="terreno">Terreno (m²):</label>
+      <input type="number" id="terreno" name="terreno" />
+
+      <label for="cubierto">Cubiertos (m²):</label>
+      <input type="number" id="cubierto" name="cubierto" />
+
+      <label for="ambientes">Cantidad de ambientes:</label>
+      <input type="number" id="ambientes" name="ambientes" min="1" />
+
+      <label for="banios">Cantidad de baños:</label>
+      <input type="number" id="banios" name="banios" min="1" />
+
+      <label for="imagen">Imagen de la propiedad:</label>
+      <input type="file" id="imagen" name="imagen" accept="image/*" />
+
+      <button type="submit" class="btn-general">Enviar Propiedad</button>
+    </form>
+  </div>
+
+  <footer class="footer">
+    <div class="contenedor-footer">
+      <div class="footer-arriba">
+        <nav class="footer-nav">
+          <a href="index.html">Home</a>
+          <a href="comprar.html">Comprar</a>
+          <a href="vender.html">Vender</a>
+          <a href="oficinas.html">Oficinas</a>
+          <a href="sobreNosotros.html">Sobre Nosotros</a>
+          <a href="faq.html">FAQ</a>
+          <a href="contacto.html">Contacto</a>
+        </nav>
+      </div>
+      <div class="redesSociales">
+        <p>&copy; 2025 Todos los derechos reservados - Tu Empresa</p>
+        <div class="redesSociales-botones">
+          <h4>Seguinos en nuestras redes</h4>
+          <a href="https://www.instagram.com" target="_blank" class="redesSociales-boton">
+            <img src="img/iconos/instagram.png" alt="Instagram" />
+          </a>
+          <a href="https://www.facebook.com" target="_blank" class="redesSociales-boton">
+            <img src="img/iconos/facebook.png" alt="Facebook" />
+          </a>
+          <a href="https://www.tiktok.com" target="_blank" class="redesSociales-boton">
+            <img src="img/iconos/tiktok.png" alt="TikTok" />
+          </a>
+          <a href="https://x.com/tuUsuario" target="_blank" class="redesSociales-boton">
+            <img src="img/iconos/xTwitter.avif" alt="X Twitter" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function mostrarFormulario(confirmado) {
+      if (confirmado) {
+        const contenedorPregunta = document.querySelector(".vendedor-pregunta");
+        if (contenedorPregunta) {
+          contenedorPregunta.style.display = "none";
+        }
+
+        const formulario = document.getElementById("formulario-propiedad");
+        formulario.classList.remove("oculto");
+
+        window.scrollTo({ top: formulario.offsetTop, behavior: "smooth" });
+      }
+    }
+    window.mostrarFormulario = mostrarFormulario;
+
+    document.addEventListener("DOMContentLoaded", () => {
+
+      const formVenta = document.getElementById("formulario-propiedad");
+
+      if (formVenta) {
+        formVenta.addEventListener("submit", (e) => {
+          e.preventDefault();
+          const valido = validarFormularioPropiedad();
+          if (valido) {
+            // Guardado ocurre dentro de validarFormularioPropiedad
+          }
+        });
+      }
+    });
+
+    function validarFormularioPropiedad() {
+      const campos = {
+        titulo: "El título es obligatorio",
+        precio: "El precio debe ser un número mayor a 0",
+        expensas: "Debe seleccionar si tiene expensas",
+        direccion: "La dirección es obligatoria",
+        localidad: "La localidad es obligatoria",
+        tipo: "Debe seleccionar un tipo de propiedad",
+        terreno: "El terreno debe ser mayor a 0",
+        cubierto: "El área cubierta debe ser mayor a 0",
+        ambientes: "Debe ingresar al menos 1 ambiente",
+        banios: "Debe ingresar al menos 1 baño",
+        imagen: "Debe subir una imagen de la propiedad"
+      };
+
+      for (let campo in campos) {
+        eliminarMensajeError("error-" + campo);
+        const input = document.getElementById(campo);
+        if (input) {
+          input.style.borderColor = "";
+        }
+      }
+
+      let hayErrores = false;
+
+      for (let campo in campos) {
+        const input = document.getElementById(campo);
+        if (!input) continue;
+
+        const valor = input.type === "file" ? input.files.length : input.value.trim();
+        let invalido = false;
+
+        if (input.type === "number") {
+          invalido = isNaN(valor) || Number(valor) <= 0;
+        } else if (input.type === "file") {
+          invalido = valor === 0;
+        } else {
+          invalido = valor === "";
+        }
+
+        if (invalido) {
+          input.style.borderColor = "red";
+          hayErrores = true;
+
+          const errorDiv = document.createElement("div");
+          errorDiv.id = "error-" + campo;
+          errorDiv.className = "mensaje-error-campo";
+          errorDiv.style.color = "red";
+          errorDiv.style.fontSize = "0.9rem";
+          errorDiv.style.marginTop = "2px";
+          errorDiv.textContent = campos[campo];
+
+          if (input.nextSibling) {
+            input.parentNode.insertBefore(errorDiv, input.nextSibling);
+          } else {
+            input.parentNode.appendChild(errorDiv);
+          }
+        } else {
+          input.style.borderColor = "green";
+        }
+      }
+
+      if (!hayErrores) {
+        const formulario = document.getElementById("formulario-propiedad");
+
+        const propiedadesGuardadasJSON = localStorage.getItem("propiedadesGuardadas");
+        const propiedades = propiedadesGuardadasJSON ? JSON.parse(propiedadesGuardadasJSON) : [];
+
+        const datos = {
+          titulo: document.getElementById("titulo").value.trim(),
+          precio: document.getElementById("precio").value.trim(),
+          expensas: document.getElementById("expensas").value,
+          direccion: document.getElementById("direccion").value.trim(),
+          localidad: document.getElementById("localidad").value.trim(),
+          tipo: document.getElementById("tipo").value,
+          terreno: document.getElementById("terreno").value.trim(),
+          cubierto: document.getElementById("cubierto").value.trim(),
+          ambientes: document.getElementById("ambientes").value.trim(),
+          banios: document.getElementById("banios").value.trim(),
+          imagenNombre: document.getElementById("imagen").files[0]?.name || ""
+        };
+
+        propiedades.push(datos);
+        localStorage.setItem("propiedadesGuardadas", JSON.stringify(propiedades));
+
+        eliminarMensajeError("mensajeExito");
+
+        const mensajeExitoDiv = document.createElement("div");
+        mensajeExitoDiv.id = "mensajeExito";
+        mensajeExitoDiv.innerHTML = "✔️ Propiedad cargada correctamente. Nuestro equipo se contactará a la brevedad para indicarle los siguientes pasos";
+        mensajeExitoDiv.style.color = "#155724";
+        mensajeExitoDiv.style.backgroundColor = "#d4edda";
+        mensajeExitoDiv.style.border = "1px solid #c3e6cb";
+        mensajeExitoDiv.style.padding = "10px";
+        mensajeExitoDiv.style.borderRadius = "5px";
+        mensajeExitoDiv.style.marginTop = "10px";
+        mensajeExitoDiv.style.fontWeight = "bold";
+
+        formulario.appendChild(mensajeExitoDiv);
+        formulario.reset();
+
+        // Limpiar bordes luego de reset
+        const elementos = formulario.querySelectorAll("input, select");
+        elementos.forEach(el => el.style.borderColor = "");
+      }
+
+      return !hayErrores;
+    }
+
+    function eliminarMensajeError(id) {
+      const mensaje = document.getElementById(id);
+      if (mensaje) {
+        mensaje.remove();
+      }
+    }
+
+  </script>
+</body>
+</html>
