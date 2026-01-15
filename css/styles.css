@@ -17,6 +17,12 @@ body {
   background-color: var(--terciario);
   color: var(--negro);
 
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+
+
   padding-top: 80px;
 }
 
@@ -97,6 +103,7 @@ a {
   background-color: var(--primario);
   color: var(--blanco);
   padding-top: 1em;
+  margin-top: auto;
 }
 
 .contenedor-footer {
@@ -758,7 +765,7 @@ a.btn-general {
 
 .vender-contacto {
   max-width: 900px;
-  margin: 0 auto 4rem;
+  margin: auto;
   padding: 2rem;
   background: var(--blanco);
   border-radius: 12px;
